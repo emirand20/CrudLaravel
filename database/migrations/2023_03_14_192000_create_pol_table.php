@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('pol', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre', 50)->unique();
+            $table->text('velocidad');
+            $table->float('posicion', 7,2)->unsigned();
+            $table->float('fisico', 7,2)->unsigned();
+            $table->enum('ritmo', ['S', 'N']);
+            $table->integer('regate')->unsigned();
             $table->timestamps();
         });
     }
