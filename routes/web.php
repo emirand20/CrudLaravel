@@ -13,4 +13,14 @@ use app\Http\Controllers\PolController;
 |
 */
 
-Route::get('/',[PolController::class, 'index'])->name('pol.welcome');
+Route::get('/',[PolController::class, 'index'])->name('pol.index');
+Route::get('/create', [PolController::class, 'create'])->name('pol.create');
+Route::post('/store', [PolController::class, 'store'])->name('pol.store');
+
+
+Route::get('/edit/{id}', [PolController::class, 'edit'])->name('pol.edit');
+Route::put('/update/{id}', [PolController::class, 'update'])->name('pol.update');
+
+
+Route::get('/show/{id}', [PolController::class, 'show'])->name('pol.show');
+Route::delete('/delete/{id}', [PolController::class, 'destroy'])->name('pol.destroy');
