@@ -70,7 +70,7 @@ class PolController extends Controller
         $pol->posicion = $request->post('posicion');
         $pol->fisico = $request->post('fisico');
         $pol->ritmo = $request->post('ritmo');
-        $pol->regate = $request->post('regate');
+        $pol->regate = $request->post('regate');    
 
         $pol->save();
 
