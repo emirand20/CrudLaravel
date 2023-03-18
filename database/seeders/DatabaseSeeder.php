@@ -14,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call( [ polSeeder::class]);
+        Pol::factory()->count(1000) -> create();
     }
 }
