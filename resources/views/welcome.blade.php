@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($pol as $p)
+        @foreach($datos as $p)
         <tr>
             <td>{{ $p->id }}</td>
             <td>{{ $p->nombre }}</td>

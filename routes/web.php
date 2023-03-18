@@ -13,4 +13,4 @@ use app\Http\Controllers\PolController;
 |
 */
 
-Route::get('/',[PolController::class, 'index'])->name('pol.index');
+Route::get('/',[PolController::class, 'index'])->name('pol.welcome');

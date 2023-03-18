@@ -12,8 +12,8 @@ class PolController extends Controller
      */
     public function index()
     {
-        $pol = Pol::all();
-        return view('pol.index', ['pol' => $pol]);
+        $datos = Pol::all();
+        return view('welcome', compact('datos'));
     }
 
     /**
