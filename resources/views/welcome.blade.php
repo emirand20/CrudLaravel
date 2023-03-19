@@ -8,6 +8,7 @@
             <th>Físico</th>
             <th>Ritmo</th>
             <th>Regate</th>
+            <th>Crud</th> 
         </tr>
     </thead>
     <tbody>
@@ -20,7 +21,20 @@
             <td>{{ $p->fisico }}</td>
             <td>{{ $p->ritmo }}</td>
             <td>{{ $p->regate }}</td>
+            <td>
+            
+                <a href="{{ route('pol.edit', $p->id) }}" class="btn btn-sm btn-primary">Editar</a>
+
+               
+                <form action="{{ route('pol.destroy', $p->id) }}" method="POST" style="display: inline-block;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                </form>
+            </td>
         </tr>
         @endforeach
     </tbody>
 </table>
+
+<a href="{{ route('pol.create') }}" class="btn btn-success">Agregar</a>
